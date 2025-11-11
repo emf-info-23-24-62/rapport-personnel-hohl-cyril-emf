@@ -79,12 +79,22 @@
 
 # Introduction
 
-Dans ce module nous allons voir la programmation fonctionnelle. Les objectifs opérationnels du module sont les suivants:  
+Dans ce module nous allons voir la programmation fonctionnelle.  Les principes de la programmation fonctionnelle sont les suivant:  
+- immutabilité -->   On ne change pas une variable, on crée une nouvelle valeur.  
+- First clas citizen --> Les fonctions peuvent être stockées dans des variables, les fonctions peuvent être passées comme arguments à d'autres fonctions, les fonctions peuvent être retournées comme résultat d’une fonction, les fonctions peuvent être stockées dans des structures de données.  
+- Fonctions pures --> Une fonction qui, à partir de mêmes paramètres, fournit toujours le 
+même résultat. Une fonction qui n’a pas de side effect : elle ne modifie pas la valeur 
+d’une variable définie en dehors de son scope.  
+
+
+Les objectifs opérationnels du module sont les suivants:  
 - alyser et décrire les exigences en vue de la réalisation d'une programmation fonctionnelle.  
 - Implémenter de manière efficiente des algorithmes et des problèmes d’applications selon le paradigme de programmation fonctionnelle et les exigences données.  
 -  Améliorer et optimiser le code impératif implémenté en utilisant la 
 programmation fonctionnelle (refactorisation).  
-- Vérifier l’exactitude et la qualité de l’implémentation.
+- Vérifier l’exactitude et la qualité de l’implémentation.  
+
+
 
 
 
@@ -1092,20 +1102,42 @@ Modifie le tableau original (contrairement à certaines méthodes qui en créent
 
 ## ``(backticks) - pour des expressions intelligentes
 
-Description à faire par vos soins...
+Permet d’insérer facilement des variables ou des expressions dans une chaîne de texte, et d’écrire sur plusieurs lignes sans contrainte.
+Très pratique pour éviter les concaténations avec +.  
 
 ```javascript
-A FAIRE PAR VOS SOINS...
-SIMPLE, DROIT AU BUT, UTILE, STYLE PENSE-BÊTE
+const nom = "Alice";
+const age = 25;
+
+console.log(`Bonjour ${nom}, tu as ${age} ans.`);
+// 👉 Bonjour Alice, tu as 25 ans.
+
+const message = `
+Salut ${nom},
+Voici ton âge : ${age}
+Bonne journée !
+`;
+
+console.log(message);
+// 👉 
+// Salut Alice,
+// Voici ton âge : 25
+// Bonne journée !
+
 ```
 
 ## `new Set()` - pour supprimer les doublons
 
-Description à faire par vos soins...
+Crée un ensemble (Set) de valeurs uniques.
+Idéal pour filtrer les doublons d’un tableau rapidement.
 
 ```javascript
-A FAIRE PAR VOS SOINS...
-SIMPLE, DROIT AU BUT, UTILE, STYLE PENSE-BÊTE
+const nombres = [1, 2, 2, 3, 3, 3, 4];
+const uniques = [...new Set(nombres)];
+
+console.log(uniques); 
+// 👉 [1, 2, 3, 4]
+
 ```
 
 <svg height="12" width="100%" style="padding-top:2em;padding-bottom:1em">
@@ -1166,4 +1198,5 @@ ou
 
 # Conclusion
 
-> Votre conclusion avec les éléments usuels
+> La programmation fonctionnelle favorise un code prévisible, testable et évolutif. Les principes mis en avant — immutabilité, fonctions pures et fonctions de premier ordre — facilitent la composition d’algorithmes clairs via map, filter, reduce, flatMap, groupBy, tout en limitant les effets de bord.  
+
