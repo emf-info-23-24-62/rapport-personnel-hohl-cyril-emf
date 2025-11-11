@@ -922,6 +922,19 @@ const trie = [...donnees].sort((a, b) =>
 console.log(trie);
 
 
+/* résultat:
+[
+  { "branche": "Allemand", "count": 78 },
+  { "branche": "Anglais", "count": 83 },
+  { "branche": "Chimie", "count": 84 },
+  { "branche": "Français", "count": 86 },
+  { "branche": "Géographie", "count": 85 },
+  { "branche": "Histoire", "count": 82 },
+  { "branche": "Maths", "count": 84 },
+  { "branche": "Physique", "count": 84 }
+]
+*/
+
 ```
 
 
