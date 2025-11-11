@@ -903,6 +903,29 @@ nombres.sort((a, b) => a - b); // [1, 2, 3, 4]
 
 ```
 
+```javascript
+const donnees = [
+  { "branche": "Physique", "count": 84 },
+  { "branche": "Français", "count": 86 },
+  { "branche": "Allemand", "count": 78 },
+  { "branche": "Maths", "count": 84 },
+  { "branche": "Anglais", "count": 83 },
+  { "branche": "Histoire", "count": 82 },
+  { "branche": "Géographie", "count": 85 },
+  { "branche": "Chimie", "count": 84 }
+];
+
+const trie = [...donnees].sort((a, b) => 
+  a.branche.localeCompare(b.branche, 'fr')
+);
+
+console.log(trie);
+
+
+```
+
+
+
 ## `map()` - tableau avec les résultats d'une fonction
 
 array.map() permet de créer un nouveau tableau à partir d’un tableau existant,
